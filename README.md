@@ -4,4 +4,4 @@ https://www.inflearn.com/course/javascript-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%
 
 
 1. 1주차까지 섹션 3: DOM 까지 듣기 (더 들을 수 있는 사람은 더 들어오기)
-2. 목요일(5월 19일) 18시 신공학관
+2. 목요일(5월 19일) 18시 제1학생회관
