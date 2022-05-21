@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" value="confirm" onclick="func_confirm()"/>
+  <input type="button" value="prompt" onclick="func_prompt()"/>
+  <ul>
+    <li>
+      <input type="button" value="open1" onclick="open1()"/>
+    </li>
+    <li>
+      <input type="button" value="open2" onclick="open2()"/>
+    </li>
+    <li>
+      <input type="button" value="open3" onclick="open3()"/>
+    </li>
+    <li>
+      <input type="button" value="open4" onclick="open4()"/>
+    </li>
+    <li>
+      <input type="button" value="open5" onclick="open5()"/>
+    </li>
+  </ul>
+  <script>
+    function func_confirm(){
+      if(confirm('ok?')){ // true or false 둘 중 하나의 값을 return
+        alert('ok');
+      }else {
+        alert('cancel');
+      }
+    };
+    function func_prompt(){
+      if(prompt('id?')==='egoing'){ // 사용자가 입력한 값을 받아서 이용할 수 있게 하는 기능
+        alert('welcome');
+      }else {
+        alert('fail');
+      }
+    }
+    //http:(protocol)//opentutorials.org(host):80(posrt)/module/1(pathname)?id=1(search)#hash(hash)
+    //===============창 제어
+    function open() {
+      window.open('demo2.html');
+    }
+    function open2() {
+      window.open('demo2.html', '_self');
+    }//자기 창에서 실행됨
+    function open3() {
+      window.open('demo2.html', '_blank');
+    }//새 창에서 실행
+    function open4() {
+      window.open('demo2.html', 'ot');
+    }//동일한 이름의 창이 있다면 그곳으로 연결된다
+    function open5() {
+      window.open('demo2.html', '_blank', 'width=200, height=200, resizable=yes');
+    }
+  </script>
+</body>
+</html>
