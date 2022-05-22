@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li class="active">CSS</li>
+    <li class="active">JavaScript</li>
+  </ul>
+  <ul>
+    <li>HTML</li>
+    <li id="active1">CSS</li>
+    <li >JavaScript</li>
+  </ul>
+  <ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ol>
+  <script>
+    var lis = document.getElementsByClassName('active'); // class이름이 active인 객체만 가져옴
+    for(var i=0; i < lis.length; i++) {
+      lis[i].style.color = 'red';
+    }
+    var ul = document.getElementsByTagName('ul')[0]; //ul태그 아래 있는 것 중 첫번째 객체를 불러옴
+    var $li = ul.getElementsByTagName('li'); //ul 이라는 유사 배열 아래에 있는 li만 가져옴
+    var $li = document.getElementById('active1');
+    $li.style.color = 'blue';
+    var $li1 = document.querySelector('li');//하나만 뽑아옴
+    $li1.style.color = 'green';
+    var $li2 = document.querySelector('.active');
+    $li2.style.color = 'yellow';
+    var $li3 = document.querySelectorAll('li'); //모든 li를 유사배열에 넣어줌
+    for(var name in $li3) {
+      $li3[name].style.color = 'magenta'
+    }
+  </script>
+</body>
+</html>
