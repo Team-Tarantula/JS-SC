@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="button" value="alert" onclick="func_alert();"/> -->
+    <!-- <input type="button" value="confirm" onclick="func_confirm();"/> -->
+    <input type="button" value="prompt" onclick="func_prompt();"/>
+    <script>
+        function func_alert(){
+            alert(1);
+            alert(2);
+            alert(3);
+        }
+        function func_confirm(){
+            if(confirm('ok?')){
+                alert('ok');
+            } else {
+                alert('cancel');
+            }
+        }
+        function func_prompt(){
+            if(prompt('id?') === 'jb'){
+                alert('welcome');
+            } else {
+                alert('fail');
+            }
+        }
+
+        // [Location 객체]
+        // 현재 윈도우의 URL 알아내기
+        console.log(location.toString(), location.href);
+        // URL Parsing
+        console.log(location.protocol, location.host, location.port, location.pathname, location.search, location.hash);
+
+        // [Navigator 객체]
+        console.dir(navigator);
+    </script>
+</body>
+</html>
