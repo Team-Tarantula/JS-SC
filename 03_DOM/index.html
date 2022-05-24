@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li class="active">CSS</li>
+        <li class="active">JavaScript</li>
+    </ul>
+    <ol>
+        <li>HTML</li>
+        <li id="active">CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <script>
+        // // var lis = document.getElementsByTagName('li');
+        // var ul = document.getElementsByTagName('ul')[0];
+        // var lis = ul.getElementsByTagName('li');
+        // for(var i=0; lis.length; i++){
+        //     lis[i].style.color = 'red';
+        // }
+        
+        // var lis = document.getElementsByClassName('active');
+        // for(var i=0; lis.length; i++){
+        //     lis[i].style.color = 'red';
+        // }
+
+        // var li = document.getElementById('active');
+        // li.style.color = 'blue';
+
+        // var li = document.querySelector('li');
+        // li.style.color = 'red';
+        // var li = document.querySelector('.active');
+        // li.style.color = 'blue';
+        var lis = document.querySelectorAll('ul li');
+        for(var name in lis){
+            lis[name].style.color = 'red';
+        }
+        
+    </script>
+</body>
+</html>
