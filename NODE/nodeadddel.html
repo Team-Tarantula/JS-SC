@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="target">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="target1">JavaScript</li>
+  </ul>
+  <input type="button" onclick="callAppendChild()" value="appendChild()"/>
+  <input type="button" onclick="callInsertBefore()" value="callInsertBefore()"/>
+  <input type="button" onclick="callRemoveChild()" value="removeChild()"/>
+  <input type="button" onclick="callReplaceChild()" value="replaceChild()"/>
+  <script>
+    function callAppendChild(){
+      var target = document.getElementById('target');
+      var li = document.createElement('li');
+      var text = document.createTextNode('JavaScript');
+      li.appendChild(text); // li 객체 안에 JavaScript라는 text를 담음
+      target.appendChild(li); // #target(body) 객체 안, li를 마지막에 추가
+    }
+    function callInsertBefore(){
+      var target = document.getElementById('target');
+      var li = document.createElement('li');
+      var text = document.createTextNode('JQuery');
+      li.appendChild(text);
+      target.insertBefore(li, target.firstChild); // 객체 앞에 추가
+    }
+    function callRemoveChild(){
+      var target = document.getElementById('target');
+      target.parentNode.removeChild(target);
+    }
+    function callReplaceChild(){
+      var a = document.createElement('a');
+      a.setAttribute('href', 'https://www.naver.com/')
+      a.appendChild(document.createTextNode('Web browser JavaScript'));
+
+      var target = document.getElementById('target1');
+      target.replaceChild(a, target.firstChild);
+    }
+  </script>
+</body>
+</html>

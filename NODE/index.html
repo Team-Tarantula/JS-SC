@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body id="start">
+  <ul>
+    <li class="marked">
+      <a href="./532">html</a>
+    </li>
+    <li>css</li>
+    <li id="active">JavaScript
+      <ul>
+        <li><a href="">JS Core</a></li>
+        <li><a href="">DOM</a></li>
+        <li><a href="">BOM</a></li>
+      </ul>
+    </li>
+  </ul>
+  <script>
+    //재귀함수
+    function traverse(target, callback){ //두개의 매개변수를 가짐, root element, 사용자가 작성한 함수의 인자로 넣어줌(callback)
+      if(target.nodeType === Node.ELEMENT_NODE) { //element node만 추출
+        if(target.nodeName === 'A') // a 태그를 가진 객체만 선택
+          callback(target); //callback위치의 함수에 target으로 추출한 객체를 인자로 넣어줌
+        var c = target.childNodes; // 유사배열 c에 target의 자식 객체를 할당
+        for(var i=0; i<c.length; i++){ //하위 노드들을 모두 열거
+          traverse(c[i], callback); //하위 노드들을 더이상 자식이 나타나지 않을 때까지 callback함수에 전달
+        }
+      }
+    }
+    traverse(document.getElementById('start'), function(elem){
+      console.log(elem);
+    })
+  </script>
+</body>
+</html>

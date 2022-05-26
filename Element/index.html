@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li class="marked">html</li>
+    <li>css</li>
+    <li id="active">
+      <ul>
+        <li>JS</li>
+        <li class="marked">DOM</li>
+        <li class="marked">BOM</li>
+      </ul>
+    </li>
+  </ul>
+  <script>
+    var list = document.getElementsByClassName('marked'); // 전체 문서에서 'marked'이름을 가진 객체 모두 조회
+    console.group('document');
+    for(var i=0; i<list.length; i++){
+      console.log(list[i].textContent);
+    }
+    console.groupEnd();
+
+    console.group('active');
+    var active = document.getElementById('active');
+    var list = active.getElementsByClassName('marked'); // active라는 객체의 하위 객체만 조회
+    for(var i=0; i<list.length; i++){
+      console.log(list[i].textContent);
+    }
+    console.groupEnd();
+  </script>
+</body>
+</html>
