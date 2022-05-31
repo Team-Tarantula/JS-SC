@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="target">Coding everybody!</p>
+  <p>data : <input type="text" id="datasource" value="Javascript"></p>
+  <p>start : <input type="text" id="start" value="5"></p>
+  <p>end : <input type="text" id="end" value="5"></p>
+  <p><input type="button" value="appendData(data)" onclick="callAppendData()"></p>
+  <p><input type="button" value="deleateData(start, end)" onclick="callDeleteData()"></p>
+  <p><input type="button" value="insertData(start, end)" onclick="callInsertData()"></p>
+  <p><input type="button" value="replaceData(start, end)" onclick="callReplaceData()"></p>
+  <p><input type="button" value="substringData(start, end)" onclick="callSubstringData()"></p>
+  <script>
+    var target = document.getElementById('target').firstChild;
+    var data = document.getElementById('datasource');
+    var start = document.getElementById('start');
+    var end = document.getElementById('end');
+    function callAppendData(){
+      target.appendData(data.value);
+    } //target 옆에 data 태그의 value를 추가
+    function callDeleteData(){
+      target.deleteData(start.value, end.value); //5번째 data와 뒤에서 5번째 data를 지움
+    }
+    function callInsertData(){
+      target.insertData(start.value, data.value); //5번째 자리에 5를 삽입
+    }
+    function callReplaceData(){
+      target.replaceData(start.value, end.value, data.value); //5번째, 5개 data 사라지고 data의 value가 그 자리에 삽입
+    }
+    function callSubstringData(){
+      alert(target.substringData(start.value, end.value)); //5번째 data 5개가 alert
+    }
+  </script>
+</body>
+</html>

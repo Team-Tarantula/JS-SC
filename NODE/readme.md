@@ -36,3 +36,24 @@ node 객체는 모든 하위 객체들의 뿌리와 같은 역할을 한다
 
 > Node.appendChild() //자식으로 추가
 > Node.removeChild() //자식 삭제
+
+## innerHTML
+
+불러오고 싶은 객체 안에 있는 객체를 모두 가져옴
+읽고 쓰는 것이 가능
+
+## outerHTML
+
+부모 객체(자기자신)를 포함한 하위 객체 모두를 보여줌
+
+---
+
+> innerText, outerText : 코드로 들어가는게 아니라 객체의 텍스트로 들어감
+
+## insertAdjacentHTML \*\*
+
+객체와 객체 추가 위치를 한번에 추가할 수 있음
+beforebegin
+afterbegin
+beforeend
+afterend

@@ -19,6 +19,12 @@
       </ul>
     </li>
   </ul>
+  <ul id="target">
+    <li>html</li>
+    <li>css</li>
+  </ul>
+  <input type="button" onclick="get()" value="get">
+  <input type="button" onclick="set()" value="set">
   <script>
     //재귀함수
     function traverse(target, callback){ //두개의 매개변수를 가짐, root element, 사용자가 작성한 함수의 인자로 넣어줌(callback)
@@ -34,6 +40,15 @@
     traverse(document.getElementById('start'), function(elem){
       console.log(elem);
     })
+    //문자열로 노드 제어
+    function get(){
+      var target = document.getElementById('target');
+      alert(target.innerHTML);
+    }
+    function set(){
+      var target = document.getElementById('target');
+      target.innerHTML = "<li>Javascript Core</li>"
+    }
   </script>
 </body>
 </html>
